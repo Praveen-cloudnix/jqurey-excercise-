@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen - Resume</title>
+    <style>
+        th {
+            vertical-align: top;
+            text-align: center;
+        }
+        .table{
+            margin: auto;
+            border-collapse: collapse; 
+            max-height: 50vh; 
+            overflow-y: auto; 
+            border-color: #FF1A00;
+        }
+    </style>
+</head>
+
+<body>
+    <table BORDER=”2″ width="" style="margin: auto; width: 80%;"  id="resumeTable">
+        <!-- Header -->
+        <tr>
+            <td colspan="2"align="center" >
+                <p id="mypage-header" >Praveen Reddy </p>
+            </td>
+        </tr>
+
+        <!-- Left Navigation and Center Content -->
+        <tr>
+            <th width="30%" > <h2>Objective</h2> </th>
+            <td>
+             
+                <p>Enthusiastic aspiring Full Stack Developer with hands-on experience in React, Node, Express, MongoDB. Eager to apply practical skills acquired through self-driven projects and learning initiatives. Excited about opportunities to collaborate, learn, and contribute to innovative tech projects. Let's connect and explore the world of coding together! 🚀 #AspiringDeveloper #FullStack #TechEnthusiast</p>
+            </td>
+        </tr>
+        <tr>
+            <th width="30%" > <h2>Education</h2> </th>
+            <td>
+                <h3 id="education">Graduation</h3>
+                <p>Sree vidyanikethan engineering college (Mechanical Engineering)</p>
+                <p>Score: 8CGPA</p>
+                <h3 id="education">Inter mediate</h3>
+                <p> Bhashyam public college</p>
+                <p> score: 9CGPA</p>
+                <h3 id="education">School</h3>
+                <p>Bhashyam Public School</p>
+                <p>Score: 9CGPA</p>
+            </td>
+        </tr>
+      
+        <tr>
+            <th width="30%" > <h2>Projects</h2> </th>
+            <td>
+                <h3 id="education">Social Media App</h3>
+                <p>MERN Social App: Developed a dynamic social
+                    platform with MERN stack for photo uploads,
+                    friend management, and profiles.
+                     </p>
+                    <p> Responsive UI/UX: Created an intuitive user
+                    interface using React, enhancing user experience and interaction while ensuring seamless
+                    photo and friend management.
+                    </p>
+                    <p>Efficient Data: Managed data using MongoDB,
+                    optimizing performance for a smooth user
+                    experience.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th width="30%" > <h2>Skills</h2> </th>
+            <td>
+                <h3 id="education">Technical skills</h3>
+                <p>HTML CSS,
+                    Tailwind CSS,
+                    JavaScript,,
+                    React,
+                    Express,
+                    MongoDB,
+                    Node,
+                    Data Structure and Algorithm,
+                    GIT</p>
+            </td>
+        </tr>
+       
+
+        <tr>
+            <th>
+                <button class="btn1">Slide up</button>
+                <button class="btn2">Slide down</button>
+            </th>
+            
+        </tr>
+         
+        <!-- Footer -->
+        <tr id="mypage-footer">
+            <th colspan="2">
+                <p>Contact: 9347618434 </p><p> Email: reddypraveen9876@gmail.com</p>
+            </th>
+        </tr>
+      
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+         $(document).ready(function () {
+            $("body").css("background-color","#FFFF88").css('color', '#CC0000');
+            
+            $("#resumeTable").addClass("table");
+
+            $('#mypage-footer p').hide()
+
+            var newDiv = $("<div>").attr("id", "references");
+
+            newDiv.css("text-align", "center")
+            newDiv.append("<p><a href='https://www.w3schools.com/jquery/eff_slidedown.asp' target='_blank' >Reference 1</a></p>");
+            newDiv.append("<p><a href='https://www.w3schools.com/jquery/default.asp' target='_blank' >Reference 2</a></p>");
+
+            newDiv.insertBefore("#mypage-footer");
+
+            $('#mypage-header').mouseover(function () {
+                $(this).css('font-size', '20px');
+            });
+
+            $('#mypage-header').mouseout(function () {
+                $(this).css('font-size', '10px');
+            });
+
+            $(".btn1").click(function(){
+                $("#mypage-footer p").slideUp();
+            });
+            $(".btn2").click(function(){
+                $("#mypage-footer p ").slideDown(2000,function(){
+                alert("the animation is complete");
+            });
+            });
+
+        });
+    </script> 
+</body>
+
+</html>
+
+
+
+
+
